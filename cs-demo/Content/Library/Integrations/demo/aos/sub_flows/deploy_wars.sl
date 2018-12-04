@@ -3,8 +3,10 @@ flow:
   name: deploy_wars
   inputs:
     - tomcat_host: "${get_sp('vm_host')}"
-    - account_service_host: "${get_sp('vm_host')}"
-    - db_host: "${get_sp('vm_host')}"
+    - account_service_host:
+        required: false
+    - db_host:
+        required: false
     - username: "${get_sp('vm_username')}"
     - password: "${get_sp('vm_password')}"
     - url: "${get_sp('war_repo_root_url')}"
